@@ -1,0 +1,118 @@
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .nav-wrap {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu__burger-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .nav-menu__burger-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .nav-menu__burger-icon {
+    font-size: 20px;
+  }
+  .nav-menu__logo {
+    margin-right: 30px;
+  }
+  .nav-menu__btns {
+    list-style-type: none;
+    display: flex;
+  }
+  .nav-menu__btn {
+    font-weight: bold;
+  }
+  .nav-menu__btn:not(:last-child) {
+    margin-right: 20px;
+  }
+  .nav-menu__btn:hover {
+    color: #808080;
+  }
+  .nav-function {
+    display: flex;
+    align-items: center;
+  }
+  .nav-function__search-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .nav-function__search-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .nav-function__search-icon {
+    font-size: 17px;
+    color: #808080;
+  }
+  .nav-function__avatar-btn {
+    margin-right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+  .nav-function__avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .nav-function__create-post-btn {
+    background: #0077FF;
+    border-radius: 18px;
+    font-weight: bold;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+  }
+  .create-post-btn__icon {
+    margin-right: 7px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, sans-serif;
+  font-size: 14px;
+  color: white;
+  background: #141414;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+a, button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
