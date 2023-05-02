@@ -1,5 +1,7 @@
 @import 'utilities';
 @import 'navbar';
+@import 'sidebar';
+@import 'login-modal';
 
 * {
   margin: 0;
@@ -19,7 +21,7 @@ body {
   margin: 0 auto;
 }
 
-a, button {
+a, button, input {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -31,4 +33,12 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.router-link-active {
+  background: $foreground-hover;
+}
+
+.nav-menu__logo .router-link-active {
+  background: transparent;
 }

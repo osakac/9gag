@@ -2,7 +2,7 @@
   <header class="header">
     <div class="nav-wrap container">
       <nav class="nav-menu">
-	      <button class="nav-menu__burger-btn">
+	      <button class="nav-menu__burger-btn" @click.stop="$emit('switch-sidebar')">
 		      <i class="nav-menu__burger-icon fa-solid fa-bars"></i>
         </button>
         <h1 class="nav-menu__logo">
@@ -10,19 +10,19 @@
         </h1>
         <ul class="nav-menu__btns">
           <li class="nav-menu__btn">
-            <router-link to="/">Shuffle</router-link>
+            <router-link to="/shuffle">Shuffle</router-link>
           </li>
 	        <li class="nav-menu__btn">
-		        <router-link to="/">Get App</router-link>
+		        <router-link to="/getapp">Get App</router-link>
 	        </li>
 	        <li class="nav-menu__btn">
-		        <router-link to="/">Memeland</router-link>
+		        <router-link to="/memeland">Memeland</router-link>
 	        </li>
 	        <li class="nav-menu__btn">
-		        <router-link to="/">Potatoz</router-link>
+		        <router-link to="/potatoz">Potatoz</router-link>
 	        </li>
 	        <li class="nav-menu__btn">
-		        <router-link to="/">Captainz</router-link>
+		        <router-link to="/captainz">Captainz</router-link>
 	        </li>
         </ul>
       </nav>
@@ -31,8 +31,9 @@
 	      <button class="nav-function__search-btn">
 		      <i class="nav-function__search-icon fa-solid fa-magnifying-glass"></i>
         </button>
+	      <button class="nav-function__login-btn" @click.stop="$emit('show-login-modal')">Sign Up/Log in</button>
 	      <button class="nav-function__avatar-btn">
-          <img class="nav-function__avatar-img" src="https://www.bsau.ru/upload/iblock/9c0/2_9yLm2yWUoMcZlywdOcfKAw.png" alt="avatar">
+          <img class="nav-function__avatar-img" src="https://gas-kvas.com/uploads/posts/2023-01/1673393665_gas-kvas-com-p-risunki-na-avatarku-anime-15.jpg" alt="avatar">
         </button>
         <button class="nav-function__create-post-btn">
 	        <i class="create-post-btn__icon fa-solid fa-pen"></i>

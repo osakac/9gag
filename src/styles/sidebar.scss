@@ -1,0 +1,62 @@
+@import 'utilities';
+
+@mixin sidebar-wrapper {
+  padding: 8px 0 8px 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    position: relative;
+  }
+
+  .sidebar {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 240px;
+  }
+
+  .sidebar__home-btn {
+    @include sidebar-wrapper;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 2px;
+
+    &:hover {
+      background: $page-line-color;
+    }
+  }
+
+  .sidebar__home-icon {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .interests-title, .recents-title {
+    font-size: 14px;
+    color: #999;
+    font-weight: bold;
+    padding-left: 16px;
+    margin-bottom: 5px;
+  }
+
+  .interests__tags, .recents__tags {
+    list-style-type: none;
+  }
+
+  .interests__tag, .recents__tag {
+    border-radius: 2px;
+
+    &:hover {
+      background: $page-line-color;
+    }
+  }
+
+  .tag-link {
+    @include sidebar-wrapper;
+    display: block;
+  }
+}
