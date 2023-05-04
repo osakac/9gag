@@ -1,0 +1,59 @@
+@import 'utilities';
+
+@media screen and (min-width: 1200px) {
+  .dropdown {
+    position: absolute;
+    background: $page-bg-color;
+    color: white;
+    border: 1px solid $page-line-color;
+    border-radius: 10px;
+    padding: 7px 0;
+    top: 42px;
+    z-index: 80;
+  }
+
+  .dropdown-avatar {
+    width: max-content;
+    left: -30px;
+  }
+
+  .dropdown-avatar__options {
+    list-style-type: none;
+  }
+
+  .dropdown-avatar__option {
+    text-align: left;
+    padding: 5px 15px;
+
+    &:hover {
+      background: $foreground-hover;
+    }
+  }
+
+  .dropdown-search {
+    left: -100px;
+    cursor: initial;
+  }
+
+  .dropdown-search__input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: $foreground-hover;
+    width: calc(100% - 10%);
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .dropdown-search__search-icon {
+    font-size: 16px;
+    color: $light-gray;
+    margin-right: 15px;
+  }
+
+  .dropdown-search__input {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}

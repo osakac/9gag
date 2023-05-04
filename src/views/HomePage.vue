@@ -1,13 +1,9 @@
 <template>
-
+	<div class="newsline"></div>
 </template>
 
-<script>
-export default {
-    setup() {
-    },
-    name: "HomePage"
-}
+<script setup>
+
 </script>
 
 <style scoped>
