@@ -3,6 +3,7 @@
 @import 'sidebar';
 @import 'login-modal';
 @import 'dropdown-avatar-search';
+@import 'profile';
 
 * {
   margin: 0;
@@ -20,6 +21,12 @@ body {
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.page-content {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
 }
 
 a, button, input {

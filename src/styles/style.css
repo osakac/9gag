@@ -105,7 +105,7 @@
     position: absolute;
     left: 0;
     top: 5px;
-    width: 240px;
+    width: 200px;
   }
   .sidebar__home-btn {
     padding: 8px 0 8px 16px;
@@ -264,6 +264,60 @@
     outline: none;
   }
 }
+@media screen and (min-width: 1200px) {
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .profile-header__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .account-info__name {
+    font-size: 24px;
+  }
+  .account-info__nickname {
+    color: #808080;
+  }
+  .profile-description {
+    margin-bottom: 20px;
+  }
+  .profile-nav__btns {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+  }
+  .profile-nav__btn-wrapper,
+  .profile-nav__options-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .profile-nav__btn {
+    font-weight: bold;
+    color: #808080;
+    padding: 10px 15px;
+  }
+  .profile-nav__btn:hover {
+    color: white;
+  }
+  .profile-nav__btn--active {
+    border-bottom: 2px solid white;
+    padding-bottom: 9px;
+    color: white;
+  }
+  .profile-nav__options-wrapper {
+    width: 100%;
+    text-align: right;
+  }
+  .profile-nav__options {
+    text-align: right;
+  }
+  .profile-nav__options-icon {
+    font-size: 16px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -280,6 +334,12 @@ body {
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.page-content {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
 }
 
 a, button, input {

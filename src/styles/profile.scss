@@ -1,0 +1,68 @@
+@import 'utilities';
+
+@media screen and (min-width: 1200px) {
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-header__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .account-info__name {
+    font-size: 24px;
+  }
+
+  .account-info__nickname {
+    color: $light-gray;
+  }
+
+  .profile-description {
+    margin-bottom: 20px;
+  }
+
+  .profile-nav__btns {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+  }
+
+  .profile-nav__btn-wrapper,
+  .profile-nav__options-wrapper {
+    border-bottom: 1px solid $page-line-color;
+  }
+
+  .profile-nav__btn {
+    font-weight: bold;
+    color: $light-gray;
+    padding: 10px 15px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .profile-nav__btn--active {
+    border-bottom: 2px solid white;
+    padding-bottom: 9px;
+    color: white;
+  }
+
+  .profile-nav__options-wrapper {
+    width: 100%;
+    text-align: right;
+  }
+
+  .profile-nav__options {
+    text-align: right;
+  }
+
+  .profile-nav__options-icon {
+    font-size: 16px;
+  }
+}

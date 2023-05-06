@@ -52,8 +52,8 @@
 </template>
 
 <script setup>
-import DropdownAvatar from "@/components/DropdownAvatar.vue";
-import DropdownSearch from "@/components/DropdownSearch.vue";
+import DropdownAvatar from "@/components/Dropdown/DropdownAvatar.vue";
+import DropdownSearch from "@/components/Dropdown/DropdownSearch.vue";
 
 const props = defineProps({
 		dropdownAvatar: Boolean,

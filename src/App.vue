@@ -9,7 +9,9 @@
   ></TheNavbar>
   <TheSidebar v-if="sidebarVisible"></TheSidebar>
 
-  <router-view/>
+  <div class="page-content container">
+    <router-view/>
+  </div>
 
   <teleport to="body">
     <LoginModal
