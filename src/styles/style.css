@@ -1,4 +1,4 @@
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .header {
     height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -97,7 +97,7 @@
     margin-right: 7px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container {
     position: relative;
   }
@@ -144,7 +144,7 @@
     display: block;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .bg-modal {
     position: absolute;
     z-index: 100;
@@ -215,7 +215,7 @@
     background: #0077ff;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .dropdown {
     position: absolute;
     background: #141414;
@@ -264,7 +264,7 @@
     outline: none;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .profile-header {
     display: flex;
     align-items: center;
@@ -337,9 +337,8 @@ body {
 }
 
 .page-content {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 500px;
+  margin: 20px auto 0;
+  width: 520px;
 }
 
 a, button, input {
