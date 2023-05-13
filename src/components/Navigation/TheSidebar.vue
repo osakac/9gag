@@ -1,10 +1,32 @@
 <template>
   <div class="container">
     <div class="sidebar">
-      <router-link  class="sidebar__home-btn" to="/">
-        <i class="sidebar__home-icon fa-solid fa-house"></i>
-        Home
-      </router-link>
+      <ul class="sidebar__categories">
+        <li class="sidebar__category">
+          <router-link  class="sidebar__category-btn" to="/">
+            <i class="sidebar__category-icon sidebar__home-icon fa-solid fa-house"></i>
+            Home
+          </router-link>
+        </li>
+        <li class="sidebar__category">
+          <router-link  class="sidebar__category-btn" to="/top">
+            <i class="sidebar__category-icon fa-solid fa-chart-simple"></i>
+            Top
+          </router-link>
+        </li>
+        <li class="sidebar__category">
+          <router-link  class="sidebar__category-btn" to="/trending">
+            <i class="sidebar__category-icon fa-solid fa-arrow-trend-up"></i>
+            Trending
+          </router-link>
+        </li>
+        <li class="sidebar__category">
+          <router-link  class="sidebar__category-btn" to="/fresh">
+            <i class="sidebar__category-icon fa-regular fa-clock"></i>
+            Fresh
+          </router-link>
+        </li>
+      </ul>
 
       <div class="recents" v-if="recents.length">
         <h3 class="recents-title">Recents</h3>
