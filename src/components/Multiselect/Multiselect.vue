@@ -1,40 +1,45 @@
 <template>
-	<VueMultiselect
-		v-model="selectedTags"
-		:options="tags"
-		:searchable="true"
-		:multiple="true"
-		:hide-selected="true"
-		@keypress.enter="addTag"
-		placeholder="Tags"
-	>
-		<template #noResult>
-			Oops! No elements found.
-		</template>
-	</VueMultiselect>
+	<div class="multiselect" @click.stop>
+		<span class="multiselect__tag" v-for="tag in selectedTags">
+			{{tag}}
+			<button class="multiselect__remove-tag-btn"><i class="fa-solid fa-xmark"></i></button>
+		</span>
+		<input class="multiselect__input" @focus="optionsVisible = true" type="text">
+		<div class="multiselect__options-wrapper" v-if="optionsVisible">
+			<ul class="multiselect__options">
+				<li class="multiselect__option" v-for="tag in tags">
+					<button class="multiselect__option-btn" @click.stop="addTag(tag)">{{tag}}</button>
+				</li>
+			</ul>
+		</div>
+	</div>
 </template>
 
 <script setup>
-import VueMultiselect from "vue-multiselect";
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+
+const optionsVisible = ref(false)
+
+function addTag(tag) {
+    emit('add-tag', tag)
+		optionsVisible.value = false
+}
 
 const props = defineProps({
 		selectedTags: Array,
 		tags: Array,
 })
+const emit = defineEmits(['update:selectedTags', 'add-tag'])
 
-const selectedTags = ref(props.selectedTags)
-
-function addTag(newTag) {
-    const tag = {
-        name: newTag,
-    }
-    props.selectedTags.push(tag)
-    props.tags.push(tag)
+function closeMultiselect() {
+    if (optionsVisible.value) optionsVisible.value = false
 }
+
+onMounted(() => {
+    document.body.addEventListener('click', closeMultiselect)
+})
 </script>
 
 <style scoped>
-@import url('vue-multiselect/dist/vue-multiselect.css');
 @import url('@/components/Multiselect/multiselect.css');
 </style>

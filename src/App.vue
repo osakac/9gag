@@ -48,11 +48,13 @@ function switchModal() {
   registerModalVisible.value = !registerModalVisible.value
 }
 
+function closeModals() {
+  if (dropdownAvatar.value) dropdownAvatar.value = false
+  if (dropdownSearch.value) dropdownSearch.value = false
+}
+
 onMounted(() => {
-  document.body.onclick = function () {
-    if (dropdownAvatar.value) dropdownAvatar.value = false
-    if (dropdownSearch.value) dropdownSearch.value = false
-  }
+  document.body.addEventListener('click', closeModals)
 })
 </script>
 
