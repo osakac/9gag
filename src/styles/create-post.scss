@@ -1,0 +1,35 @@
+@import 'utilities';
+
+@media screen and (min-width: 1280px) {
+  .create-post {
+    &__page-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    &__form-wrapper {
+      padding: 20px;
+      border: 1px solid $page-line-color;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__post-title {
+      background: transparent;
+      border: 1px solid $page-line-color;
+      padding: 10px;
+      border-radius: 7px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    &__post-btn {
+      background: #0077ff;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 20px;
+      align-self: end;
+    }
+  }
+}

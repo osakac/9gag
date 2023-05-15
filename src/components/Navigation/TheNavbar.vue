@@ -42,7 +42,7 @@
           <img class="nav-function__avatar-img" src="https://gas-kvas.com/uploads/posts/2023-01/1673393665_gas-kvas-com-p-risunki-na-avatarku-anime-15.jpg" alt="avatar">
 		      <DropdownAvatar v-if="props.dropdownAvatar"></DropdownAvatar>
         </button>
-        <button class="nav-function__create-post-btn">
+        <button class="nav-function__create-post-btn" @click.stop="$router.push('create-post')">
 	        <i class="create-post-btn__icon fa-solid fa-pen"></i>
           Post
         </button>
