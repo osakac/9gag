@@ -29,16 +29,20 @@
 .multiselect__input {
   width: 100%;
   background: transparent;
-  border: 1px solid red;
+  border: none;
+  padding: 4px;
   outline: none;
   font-size: 1rem;
+}
+.multiselect__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
 }
 .multiselect__options-wrapper {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   position: absolute;
   padding: 5px 0;
-  top: 45px;
+  top: 55px;
   left: 0;
   right: 0;
   z-index: 10;

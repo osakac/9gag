@@ -32,12 +32,14 @@
   &__input{
     width: 100%;
     background: transparent;
-    border: 1px solid red;
-    //padding: 10px;
-    //border-radius: 10px;
-    //margin-bottom: 20px;
+    border: none;
+    padding: 4px;
     outline: none;
     font-size: 1rem;
+
+    &::placeholder{
+      color: rgb(255, 255, 255, .3);
+    }
   }
 
   &__options-wrapper{
@@ -45,7 +47,7 @@
     border-radius: 10px;
     position: absolute;
     padding: 5px 0;
-    top: 45px;
+    top: 55px;
     left: 0;
     right: 0;
     z-index: 10;

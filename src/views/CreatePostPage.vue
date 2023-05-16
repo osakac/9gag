@@ -3,12 +3,12 @@
 	<div class="create-post__form-wrapper">
 		<input class="create-post__post-title" type="text" placeholder="Title">
 		<div class="create-post__content"></div>
-<!--		<Multiselect-->
-<!--			class="create-post__multiselect-tags"-->
-<!--			:selectedTags="selectedTags"-->
-<!--			:tags="tags"-->
-<!--		></Multiselect>-->
-		<Multiselect v-model:selectedTags="selectedTags" :tags="tags" @add-tag="addTag"></Multiselect>
+		<Multiselect
+			:selectedTags="selectedTags"
+			:tags="tags"
+			@add-tag="addTag"
+			@remove-tag="removeTag"
+		></Multiselect>
 		<button class="create-post__post-btn">Post</button>
 	</div>
 </template>
@@ -22,6 +22,11 @@ const tags = ref(['cars', 'anime', 'memes', 'pranks'])
 
 function addTag(tag) {
     selectedTags.value.push(tag)
+}
+
+function removeTag(tag) {
+    const neededTag = selectedTags.value.indexOf(tag)
+		selectedTags.value.splice(neededTag, 1)
 }
 </script>
 

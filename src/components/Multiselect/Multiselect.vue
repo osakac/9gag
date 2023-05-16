@@ -2,12 +2,18 @@
 	<div class="multiselect" @click.stop>
 		<span class="multiselect__tag" v-for="tag in selectedTags">
 			{{tag}}
-			<button class="multiselect__remove-tag-btn"><i class="fa-solid fa-xmark"></i></button>
+			<button class="multiselect__remove-tag-btn" @click.stop="$emit('remove-tag', tag)"><i class="fa-solid fa-xmark"></i></button>
 		</span>
-		<input class="multiselect__input" @focus="optionsVisible = true" type="text">
+		<input
+			class="multiselect__input"
+			v-model.trim="inputValue"
+			@keypress.enter="addTag(inputValue)"
+			@focus="optionsVisible = true"
+			placeholder="Add tags"
+			type="text">
 		<div class="multiselect__options-wrapper" v-if="optionsVisible">
 			<ul class="multiselect__options">
-				<li class="multiselect__option" v-for="tag in tags">
+				<li class="multiselect__option" v-for="tag in filteredTags">
 					<button class="multiselect__option-btn" @click.stop="addTag(tag)">{{tag}}</button>
 				</li>
 			</ul>
@@ -16,20 +22,27 @@
 </template>
 
 <script setup>
-import {onMounted, ref} from "vue";
+import {computed, onMounted, ref} from "vue";
 
 const optionsVisible = ref(false)
+const inputValue = ref('')
+
+const filteredTags = computed(() => {
+    const exception = props.tags.filter(el => !props.selectedTags.includes(el))
+    return exception.filter(el => el.includes(inputValue.value))
+})
 
 function addTag(tag) {
     emit('add-tag', tag)
 		optionsVisible.value = false
+		inputValue.value = ''
 }
 
 const props = defineProps({
 		selectedTags: Array,
 		tags: Array,
 })
-const emit = defineEmits(['update:selectedTags', 'add-tag'])
+const emit = defineEmits(['add-tag', 'remove-tag'])
 
 function closeMultiselect() {
     if (optionsVisible.value) optionsVisible.value = false
