@@ -37,6 +37,14 @@
 .multiselect__input::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
+.multiselect__tags-counter {
+  margin-left: 7px;
+  text-align: right;
+}
+.multiselect__tags-counter--active {
+  width: 100%;
+  color: red;
+}
 .multiselect__options-wrapper {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
