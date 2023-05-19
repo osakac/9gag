@@ -48,19 +48,31 @@
     border: 1px solid $page-line-color;
   }
 
-  .modal__content {
-    padding: 20px 20px 30px;
+  .modal__form {
+    padding: 20px 20px 0;
   }
 
-  .modal__input {
+  .modal__form-control {
+    margin-bottom: 20px;
+  }
+
+  .modal__form-input {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
     border-radius: 8px;
     padding: 10px 16px;
     background: transparent;
     border: 1px solid $page-line-color;
     outline: none;
+
+    &--invalid {
+      border: 1px solid red;
+    }
+  }
+
+  .modal__form-error {
+    color: red;
+    padding-left: 5px;
   }
 
   .modal__button {
@@ -74,6 +86,7 @@
 
   .modal__footer {
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .modal__footer-btn {
