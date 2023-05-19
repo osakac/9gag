@@ -39,8 +39,6 @@
 </template>
 
 <script setup>
-import {useField} from "vee-validate";
-import * as yup from "yup"
 import {ref} from "vue";
 import {useStore} from "vuex";
 
@@ -86,16 +84,6 @@ function onSubmit() {
         console.log(data)
     }
 }
-
-// const {value: login, errorMessage: loginError} = useField(
-//     'username or email',
-// 		yup
-// 				.string()
-// 				.trim()
-// 				.required()
-// 				.email()
-// )
-// const {value: password, errorMessage: passwordError} = useField('password')
 </script>
 
 <style scoped>
