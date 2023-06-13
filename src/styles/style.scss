@@ -5,6 +5,7 @@
 @import 'dropdown-avatar-search';
 @import 'profile';
 @import 'create-post';
+@import 'profile-settings';
 
 * {
   margin: 0;
@@ -27,7 +28,7 @@ body {
 
 .page-content {
   margin: 20px auto 0;
-  width: 650px;
+  width: 800px;
 }
 
 a, button, input {

@@ -36,7 +36,7 @@
 				>Saved</button>
 			</li>
 			<li class="profile-nav__options-wrapper">
-				<button class="profile-nav__btn profile-nav__options">
+				<button class="profile-nav__btn profile-nav__options" @click.stop="$router.push('profile-settings')">
 					<i class="profile-nav__options-icon fa-solid fa-ellipsis-vertical"></i>
 				</button>
 			</li>

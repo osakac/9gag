@@ -17,6 +17,11 @@ const routes = [
     name: 'create-post',
     component: () => import('@/views/CreatePostPage.vue')
   },
+  {
+    path: '/profile-settings',
+    name: 'profile-settings',
+    component: () => import('@/views/ProfileSettingsPage.vue')
+  },
 ]
 
 const router = createRouter({

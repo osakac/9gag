@@ -23,10 +23,14 @@
 
   .dropdown-avatar__option {
     text-align: left;
-    padding: 5px 15px;
+    padding: 10px 15px;
+
+    &-btn {
+      background: transparent !important;
+    }
 
     &:hover {
-      background: $foreground-hover;
+      background: $page-line-color;
     }
   }
 

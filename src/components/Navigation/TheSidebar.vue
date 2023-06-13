@@ -4,7 +4,7 @@
       <ul class="sidebar__categories">
         <li class="sidebar__category">
           <router-link  class="sidebar__category-btn" to="/">
-            <i class="sidebar__category-icon sidebar__home-icon fa-solid fa-house"></i>
+            <i class="sidebar__category-icon fa-solid fa-house"></i>
             Home
           </router-link>
         </li>
