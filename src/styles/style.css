@@ -377,7 +377,8 @@
 @media screen and (min-width: 1280px) {
   .profile-settings__navigation {
     list-style-type: none;
-    width: 20%;
+    width: 190px;
+    margin-right: 40px;
   }
   .profile-settings__nav-icon {
     font-size: 16px;
@@ -385,16 +386,60 @@
     text-align: center;
     margin-right: 5px;
   }
-  .profile-settings__item {
+  .profile-settings__nav-item {
     border-radius: 2px;
   }
-  .profile-settings__item:hover {
+  .profile-settings__nav-item:hover {
     background: rgba(255, 255, 255, 0.2);
   }
-  .profile-settings__item-btn {
+  .profile-settings__nav-item-btn {
     display: block;
     border-radius: 2px;
     padding: 8px 0 8px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .profile-settings__wrapper {
+    display: flex;
+  }
+  .profile-settings__content {
+    width: 100%;
+  }
+  .profile-settings__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .profile-settings__field-block {
+    margin-bottom: 20px;
+  }
+  .profile-settings__field-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .profile-settings__avatar-block {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .profile-settings__avatar {
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .profile-settings__avatar-input::file-selector-button {
+    border-radius: 2px;
+    border: none;
+    color: white;
+    padding: 3px 7px;
+    background: rgb(107, 107, 107);
+    margin-right: 10px;
+  }
+  .profile-settings__avatar-input::file-selector-button:hover {
+    background: rgb(129, 129, 129);
+  }
+  .profile-settings__avatar-input::file-selector-button:hover,
+  .profile-settings__avatar-input:hover {
+    cursor: pointer;
   }
 }
 * {
