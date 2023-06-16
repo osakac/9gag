@@ -377,7 +377,7 @@
 @media screen and (min-width: 1280px) {
   .profile-settings__navigation {
     list-style-type: none;
-    width: 190px;
+    width: 160px;
     margin-right: 40px;
   }
   .profile-settings__nav-icon {
@@ -403,23 +403,69 @@
     display: flex;
   }
   .profile-settings__content {
-    width: 100%;
+    width: 50%;
   }
   .profile-settings__title {
     font-size: 24px;
     margin-bottom: 20px;
   }
   .profile-settings__field-block {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
   }
   .profile-settings__field-label {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+  }
+  .profile-settings__input-wrapper {
+    background: transparent;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 10px;
+  }
+  .profile-settings__select-wrapper {
+    background: rgb(59, 59, 59);
+    border-radius: 2px;
+    border: 1px solid white;
+    outline: none;
+    padding: 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(@/assets/svg/select__arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 13px;
+  }
+  .profile-settings__birthday-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile-settings__date-input {
+    text-align: center;
+    width: 100px;
+  }
+  .profile-settings__date-input:first-of-type {
+    width: 160px;
+  }
+  .profile-settings__textarea {
+    resize: none;
+  }
+  .profile-settings__save-btn {
+    font-weight: bold;
+    background: #0077FF;
+    padding: 10px 16px;
+    border-radius: 2px;
+  }
+  .profile-settings__display-name {
+    margin-top: 5px;
+    color: #808080;
   }
   .profile-settings__avatar-block {
     display: flex;
     align-items: center;
-    margin-top: 10px;
   }
   .profile-settings__avatar {
     width: 80px;
@@ -466,7 +512,7 @@ body {
   width: 800px;
 }
 
-a, button, input {
+a, button, input, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;

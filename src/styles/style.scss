@@ -32,7 +32,7 @@ body {
   width: 800px;
 }
 
-a, button, input {
+a, button, input, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -45,11 +45,9 @@ button {
   border: none;
   cursor: pointer;
 }
-
 .router-link-active {
   background: $foreground-hover;
 }
-
 .nav-menu__logo .router-link-active {
   background: transparent;
 }

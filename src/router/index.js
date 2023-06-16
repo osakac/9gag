@@ -22,6 +22,16 @@ const routes = [
     name: 'profile-settings',
     component: () => import('@/views/ProfileSettingsPage.vue')
   },
+  {
+    path: '/profile-settings-account',
+    name: 'profile-settings-account',
+    component: () => import('@/views/ProfileSettingsAccountPage.vue')
+  },
+  {
+    path: '/profile-settings-password',
+    name: 'profile-settings-password',
+    component: () => import('@/views/ProfileSettingsPasswordPage.vue')
+  },
 ]
 
 const router = createRouter({

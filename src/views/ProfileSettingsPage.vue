@@ -13,8 +13,34 @@
 			</div>
 			<div class="profile-settings__field-block">
 				<span class="profile-settings__field-label">Display name</span>
-				<input type="text">
+				<input class="profile-settings__input-wrapper" type="text">
+				<span class="profile-settings__display-name">This is the name that will be visible on your profile</span>
 			</div>
+			<div class="profile-settings__field-block">
+				<span class="profile-settings__field-label">Status</span>
+				<select class="profile-settings__select-wrapper"></select>
+			</div>
+			<div class="profile-settings__field-block">
+				<span class="profile-settings__field-label">Gender</span>
+				<select class="profile-settings__select-wrapper"></select>
+			</div>
+			<div class="profile-settings__field-block">
+				<span class="profile-settings__field-label">Birthday</span>
+				<div class="profile-settings__birthday-wrapper">
+					<input class="profile-settings__input-wrapper profile-settings__date-input" type="text" placeholder="YYYY">
+					<input class="profile-settings__input-wrapper profile-settings__date-input" type="text" placeholder="MM">
+					<input class="profile-settings__input-wrapper profile-settings__date-input" type="text" placeholder="DD">
+				</div>
+			</div>
+			<div class="profile-settings__field-block">
+				<span class="profile-settings__field-label">Hometown</span>
+				<select class="profile-settings__select-wrapper"></select>
+			</div>
+			<div class="profile-settings__field-block">
+				<span class="profile-settings__field-label">About</span>
+				<textarea class="profile-settings__textarea profile-settings__input-wrapper" rows="5" maxlength="170"></textarea>
+			</div>
+			<button class="profile-settings__save-btn">Save Changes</button>
 		</div>
 	</div>
 </template>
